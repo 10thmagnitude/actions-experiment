@@ -15,9 +15,9 @@ jobs:
         dotnet-version: 3.0.100
     
     - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
     - name: Dump job context
       env:
         JOB_CONTEXT: ${{ toJson(job) }}
